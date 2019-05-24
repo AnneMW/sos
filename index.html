@@ -11,14 +11,26 @@
     <p>Click the button to display the date.</p>
     <button onclick="displayDate()">The time is?</button>
     <br><br>
-    <p id="demo"></p>
-
-
+    <p id="date"></p>
+    <br>
+    <div id="lexus"></div>
+    <br>
+    <div id="col"></div>
 
 <script>
     function displayDate() {
-      document.getElementById("demo").innerHTML = Date();
+      document.getElementById("date").innerHTML = Date();
     };
+
+    var car = {
+      name: "Lexus",
+      model: "RX300",
+      color: "maroon"
+    };
+
+    document.getElementById("lexus").innerHTML = "You drive a "+ car.name;
+    document.getElementById("col").innerHTML = "It is " + car.color +" in color";
+
 
     </script>
   </body>
