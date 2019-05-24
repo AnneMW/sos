@@ -16,20 +16,40 @@
     <div id="lexus"></div>
     <br>
     <div id="col"></div>
+    <br>
+
+    <button onclick="getTime()">Greeting---</button>
+    <br><br>
+    <p id="greet"></p>
 
 <script>
     function displayDate() {
       document.getElementById("date").innerHTML = Date();
     };
-
     var car = {
       name: "Lexus",
       model: "RX300",
       color: "maroon"
     };
-
     document.getElementById("lexus").innerHTML = "You drive a "+ car.name;
     document.getElementById("col").innerHTML = "It is " + car.color +" in color";
+
+    function getTime() {
+      var time = new Date().getHours();
+      var greeting;
+      if (time < 10){
+        greeting = "Good Morning";
+      } else if (time < 20) {
+        greeting = "Good Evening";
+      } else {
+        greeting = "Good Day";
+      }
+      document.getElementById("greet").innerHTML = greeting;
+    };
+    
+
+
+
 
 
     </script>
