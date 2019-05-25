@@ -25,11 +25,25 @@
     <button onclick="one()">Name</button>
     <br>
     <p id="two"></p>
+    <br><br>
+    <h3>Constructors</h3>
+    <br>
+    <p id="os"></p>
+    <br>
+    <p id="ag"></p>
+    <br>
+    <p id="color"></p>
+
+
+
+
+
 
 <script>
     function displayDate() {
       document.getElementById("date").innerHTML = Date();
     };
+
     var car = {
       name: "Lexus",
       model: "RX300",
@@ -61,6 +75,18 @@
       }
       document.getElementById("two").innerHTML = text;
     }
+
+    //Constructors
+    function Person(name, age, color) {
+      this.name = name;
+      this.age = age;
+      this.color = color;
+    };
+    myDoctor = new Person("Dan", 45, "Hazel");
+    document.getElementById("os").innerHTML = myDoctor.name;
+    document.getElementById("ag").innerHTML = myDoctor.age;
+    document.getElementById("color").innerHTML = myDoctor.color;
+
 
 
 
