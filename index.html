@@ -21,6 +21,10 @@
     <button onclick="getTime()">Greeting---</button>
     <br><br>
     <p id="greet"></p>
+    <br>
+    <button onclick="one()">Name</button>
+    <br>
+    <p id="two"></p>
 
 <script>
     function displayDate() {
@@ -46,7 +50,18 @@
       }
       document.getElementById("greet").innerHTML = greeting;
     };
-    
+
+    function one() {
+      var text;
+      var person = prompt("Please enter your name");
+      if (person == null || person == "") {
+        text = "You cancelled Prompt.";
+      } else {
+        text = "Hello\n" + person +"\nHow are you doing?";
+      }
+      document.getElementById("two").innerHTML = text;
+    }
+
 
 
 
